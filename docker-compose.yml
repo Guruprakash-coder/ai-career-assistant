@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  java-backend:
+    build: ./demo # Points to your Java folder
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=${DATABASE_URL}
+      - SPRING_DATASOURCE_USERNAME=${DATABASE_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DATABASE_PASSWORD}
+    env_file:
+      - .env
+
+  ml-service:
+    build: ./ml-service # Points to your Python folder
+    ports:
+      - "8000:8000"

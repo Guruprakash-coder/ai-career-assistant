@@ -1,0 +1,26 @@
+# ========================
+# SECRETS (CRITICAL)
+# ========================
+.env
+
+# ========================
+# PYTHON (ml-service)
+# ========================
+ml-service/venv/
+ml-service/__pycache__/
+*.pyc
+
+# ========================
+# JAVA / SPRING BOOT (demo)
+# ========================
+demo/target/
+*.jar
+*.class
+
+# ========================
+# IDE & OS FILES
+# ========================
+.vscode/
+.idea/
+*.log
+.DS_Store
