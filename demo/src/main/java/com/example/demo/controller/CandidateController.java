@@ -4,8 +4,10 @@ import com.example.demo.dto.CandidateRequest;
 import com.example.demo.model.ResumeProfile;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/candidates") // The base URL for this controller
 public class CandidateController {
@@ -38,5 +40,10 @@ public class CandidateController {
         userRepository.save(newUser);
 
         return "Success! Candidate profile and AI score saved to Neon Database.";
+    }
+
+    @GetMapping
+    public List<User> getAllCandidates() {
+        return userRepository.findAll();
     }
 }

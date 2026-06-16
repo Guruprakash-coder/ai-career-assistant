@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "resume_profiles")
@@ -23,6 +24,7 @@ public class ResumeProfile {
     private List<String> topTechnicalSkills;
 
     // Links this profile back to a specific User
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;

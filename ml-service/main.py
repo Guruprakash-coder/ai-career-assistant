@@ -1,10 +1,19 @@
 import os
 import io
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from pypdf import PdfReader
 from google import genai # <--- The new import!
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # The new SDK automatically looks for the GEMINI_API_KEY in your .env!
 client = genai.Client()
