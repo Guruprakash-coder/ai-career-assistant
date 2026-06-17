@@ -39,7 +39,7 @@ public class CandidateController {
         // automatically saves the ResumeProfile and the list of skills too!
         userRepository.save(newUser);
 
-        return "Success! Candidate profile and AI score saved to Neon Database.";
+        return "Success! Student profile and AI score saved to Neon Database.";
     }
 
     @GetMapping

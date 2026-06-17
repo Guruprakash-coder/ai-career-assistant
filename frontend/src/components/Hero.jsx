@@ -3,10 +3,10 @@ import React from 'react';
 export default function Hero() {
   return (
     <header className="hero">
-      <h1 className="hero-title">Elevate Your Hiring with AI Insights</h1>
+      <h1 className="hero-title">Analyze & Accelerate Your Tech Career</h1>
       <p className="hero-subtitle">
-        Upload resumes, extract key technical skill clusters, and automatically score applicants
-        against software engineering roles in seconds using state-of-the-art Gemini intelligence.
+        Upload your resume to instantly extract key technical skill clusters, assess your readiness
+        for industry software engineering roles, and get actionable career insights using state-of-the-art Gemini intelligence.
       </p>
     </header>
   );

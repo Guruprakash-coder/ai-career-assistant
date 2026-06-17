@@ -18,13 +18,13 @@ export default function Navbar({ activeTab, setActiveTab }) {
             className={`nav-tab-btn ${activeTab === 'analyze' ? 'active' : ''}`}
             onClick={() => setActiveTab('analyze')}
           >
-            Analyze Resume
+            Assess Resume
           </button>
           <button
             className={`nav-tab-btn ${activeTab === 'database' ? 'active' : ''}`}
             onClick={() => setActiveTab('database')}
           >
-            Talent Pool
+            Assessment History
           </button>
         </div>
 

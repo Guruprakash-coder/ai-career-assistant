@@ -137,7 +137,7 @@ export default function ResumeUpload({ onAnalysisComplete }) {
             <div className="scanning-line"></div>
             <div className="spinner"></div>
             <div className="upload-title" style={{ zIndex: 11 }}>AI Resume Scanner Active</div>
-            <div className="upload-hint" style={{ zIndex: 11 }}>Extracting skills, evaluating match score, summarizing experience...</div>
+            <div className="upload-hint" style={{ zIndex: 11 }}>Extracting skills, evaluating career readiness, and summarizing strengths...</div>
           </div>
         )}
       </div>

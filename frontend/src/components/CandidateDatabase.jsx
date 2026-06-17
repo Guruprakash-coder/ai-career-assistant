@@ -50,7 +50,7 @@ export default function CandidateDatabase() {
           <input 
             type="text" 
             className="search-input" 
-            placeholder="Search candidates by name, email, or technical skill..."
+            placeholder="Search saved profiles by name, email, or technical skill..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -74,8 +74,8 @@ export default function CandidateDatabase() {
       ) : filteredCandidates.length === 0 ? (
         <div className="empty-state">
           <Users size={48} />
-          <div className="empty-state-title">No Candidates Found</div>
-          <p>{searchTerm ? 'Try adjusting your search criteria' : 'Begin by uploading and saving a resume profile'}</p>
+          <div className="empty-state-title">No Profiles Found</div>
+          <p>{searchTerm ? 'Try adjusting your search criteria' : 'Begin by uploading and saving your resume assessment'}</p>
         </div>
       ) : (
         <div className="candidates-grid">
@@ -201,7 +201,7 @@ function CandidateModal({ candidate, onClose }) {
                   </div>
                 </div>
                 <div className={`score-feedback ${scoreClass}`} style={{ fontSize: '1.1rem', marginTop: '1rem' }}>
-                  {score >= 80 ? 'Highly Qualified' : score >= 50 ? 'Strong Candidate' : 'Additional Review'}
+                  {score >= 80 ? 'Industry Ready' : score >= 50 ? 'Solid Foundation' : 'Requires Focus'}
                 </div>
               </div>
 

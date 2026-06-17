@@ -48,7 +48,7 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
         throw new Error('Failed to save profile. Please verify connection.');
       }
 
-      onSaveSuccess(`Candidate ${name} saved successfully!`);
+      onSaveSuccess(`Student ${name} saved successfully!`);
     } catch (err) {
       console.error(err);
       setError(err.message || 'An error occurred while saving.');
@@ -63,7 +63,7 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
       <div className="dashboard-sidebar">
         {/* Match Score */}
         <div className="glass-panel score-card">
-          <h3 className="score-title">Match Score</h3>
+          <h3 className="score-title">Career Readiness</h3>
           <div className="gauge-container">
             <svg className="gauge-svg">
               <circle className="gauge-bg" cx="75" cy="75" r={radius} />
@@ -89,7 +89,7 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
             </div>
           </div>
           <div className={`score-feedback ${scoreClass}`}>
-            {resumeScore >= 80 ? 'Highly Qualified' : resumeScore >= 50 ? 'Strong Candidate' : 'Additional Review Recommended'}
+            {resumeScore >= 80 ? 'Industry Ready' : resumeScore >= 50 ? 'Solid Foundation' : 'Requires Focus'}
           </div>
         </div>
 
@@ -124,11 +124,11 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
         <div className="glass-panel glass-card save-form-card">
           <h3 className="section-header">
             <Database size={20} style={{ color: 'var(--primary)' }} />
-            Save Profile to Database
+            Save Profile to History
           </h3>
           <form onSubmit={handleSave}>
             <div className="form-group">
-              <label className="form-label" htmlFor="cand-name">Candidate Name</label>
+              <label className="form-label" htmlFor="cand-name">Student Name</label>
               <input 
                 id="cand-name"
                 type="text" 
@@ -142,7 +142,7 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
             </div>
             
             <div className="form-group">
-              <label className="form-label" htmlFor="cand-email">Email Address</label>
+              <label className="form-label" htmlFor="cand-email">Your Email Address</label>
               <input 
                 id="cand-email"
                 type="email" 
@@ -177,7 +177,7 @@ export default function AnalysisDashboard({ analysisData, onSaveSuccess, onReset
                 style={{ flex: 2 }}
                 disabled={saving}
               >
-                {saving ? 'Saving...' : 'Save Candidate Profile'}
+                {saving ? 'Saving...' : 'Save Profile & Score'}
               </button>
             </div>
           </form>

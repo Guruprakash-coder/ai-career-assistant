@@ -36,9 +36,9 @@ async def analyze_resume(file: UploadFile = File(...)):
         
     # 2. Setup Prompt
     prompt = f"""
-    You are an expert technical AI recruiter. Read the following resume text.
-    Extract the candidate's top technical skills, give the resume a score out of 100 
-    based on standard software engineering roles, and provide a 2-sentence summary of their profile.
+    You are an expert technical career advisor. Read the following resume text.
+    Extract the student's top technical skills, give the resume a career readiness score out of 100 
+    based on standard entry-to-mid level software engineering roles, and provide a 2-sentence summary of their strengths along with a short advice tip on areas of improvement.
     
     Return the response as a clean JSON format.
     
