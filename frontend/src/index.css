@@ -4,55 +4,55 @@
   /* Common variables */
   --font-title: 'Outfit', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 30px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   
-  /* Light Theme Variables */
-  --background: hsl(210, 40%, 98%);
-  --background-alt: hsl(210, 30%, 95%);
+  /* Light Theme Variables (Greys + Indigo & Teal accents) */
+  --background: hsl(220, 20%, 97%);
+  --background-alt: hsl(220, 16%, 93%);
   --card: hsl(0, 0%, 100%);
-  --card-hover: hsl(210, 20%, 99%);
-  --border: hsl(214, 32%, 91%);
-  --text: hsl(222, 47%, 11%);
-  --text-muted: hsl(215, 25%, 45%);
-  --primary: hsl(255, 85%, 55%);
-  --primary-hover: hsl(255, 85%, 48%);
-  --primary-light: hsl(255, 85%, 95%);
-  --accent: hsl(195, 90%, 45%);
-  --accent-light: hsl(195, 90%, 93%);
-  --success: hsl(142, 76%, 36%);
-  --success-light: hsl(142, 76%, 93%);
-  --warning: hsl(38, 92%, 50%);
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
-  --score-badge-bg: hsl(255, 85%, 95%);
+  --card-hover: hsl(220, 25%, 99%);
+  --border: hsl(220, 13%, 88%);
+  --text: hsl(220, 40%, 12%);
+  --text-muted: hsl(220, 12%, 46%);
+  --primary: hsl(243, 75%, 59%);         /* Rich Electric Indigo */
+  --primary-hover: hsl(243, 75%, 52%);
+  --primary-light: hsl(243, 85%, 96%);
+  --accent: hsl(172, 80%, 38%);          /* Deep Emerald Teal */
+  --accent-light: hsl(172, 80%, 94%);
+  --success: hsl(150, 84%, 32%);
+  --success-light: hsl(150, 84%, 93%);
+  --warning: hsl(35, 92%, 46%);
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 12px 40px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.02);
+  --score-badge-bg: hsl(243, 85%, 96%);
 }
 
 [data-theme='dark'] {
-  /* Dark Theme Variables */
-  --background: hsl(222, 47%, 9%);
-  --background-alt: hsl(222, 47%, 6%);
-  --card: hsl(223, 47%, 13%);
-  --card-hover: hsl(223, 47%, 16%);
-  --border: hsl(223, 47%, 20%);
-  --text: hsl(210, 40%, 98%);
-  --text-muted: hsl(215, 20%, 72%);
-  --primary: hsl(263, 90%, 66%);
-  --primary-hover: hsl(263, 90%, 72%);
-  --primary-light: rgba(139, 92, 246, 0.15);
-  --accent: hsl(190, 95%, 50%);
-  --accent-light: rgba(6, 182, 212, 0.15);
-  --success: hsl(142, 70%, 45%);
-  --success-light: rgba(16, 185, 129, 0.15);
-  --warning: hsl(48, 96%, 53%);
-  --glass-bg: rgba(15, 23, 42, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  --score-badge-bg: rgba(139, 92, 246, 0.15);
+  /* Dark Theme Variables (Slate Greys + Neon Indigo & Teal accents) */
+  --background: hsl(220, 24%, 7%);
+  --background-alt: hsl(220, 24%, 5%);
+  --card: hsl(220, 20%, 12%);
+  --card-hover: hsl(220, 20%, 15%);
+  --border: hsl(220, 14%, 20%);
+  --text: hsl(220, 20%, 96%);
+  --text-muted: hsl(218, 11%, 68%);
+  --primary: hsl(239, 84%, 67%);        /* Bright Electric Indigo */
+  --primary-hover: hsl(239, 84%, 73%);
+  --primary-light: rgba(99, 102, 241, 0.16);
+  --accent: hsl(172, 80%, 45%);         /* Neon Teal */
+  --accent-light: rgba(20, 184, 166, 0.16);
+  --success: hsl(150, 70%, 45%);
+  --success-light: rgba(16, 185, 129, 0.16);
+  --warning: hsl(45, 96%, 50%);
+  --glass-bg: rgba(15, 23, 42, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.04);
+  --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.35), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  --score-badge-bg: rgba(99, 102, 241, 0.16);
 }
 
 * {
@@ -86,8 +86,8 @@ body.theme-transitioning * {
 /* Glassmorphism Styles */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: var(--radius-lg);
@@ -99,14 +99,14 @@ body.theme-transitioning * {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.01);
   transition: var(--transition-smooth);
 }
 
 .glass-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.12);
-  border-color: var(--primary-light);
+  transform: translateY(-5px) scale(1.008);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 0 20px -5px var(--primary-light);
+  border-color: var(--primary);
   background-color: var(--card-hover);
 }
 
@@ -251,7 +251,7 @@ body.theme-transitioning * {
 .upload-zone {
   border: 2px dashed var(--border);
   border-radius: var(--radius-lg);
-  padding: 4rem 2rem;
+  padding: 4.5rem 2rem;
   text-align: center;
   cursor: pointer;
   background: var(--card);
@@ -268,12 +268,13 @@ body.theme-transitioning * {
 .upload-zone:hover, .upload-zone.drag-active {
   border-color: var(--primary);
   background: var(--card-hover);
-  box-shadow: 0 12px 24px -10px var(--primary-light);
+  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.12);
+  transform: translateY(-2px);
 }
 
 .upload-icon {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   background: var(--primary-light);
   border-radius: 50%;
   display: flex;
@@ -284,13 +285,17 @@ body.theme-transitioning * {
 }
 
 .upload-zone:hover .upload-icon {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(6deg);
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
 }
 
 .upload-title {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .upload-hint {
@@ -468,7 +473,7 @@ body.theme-transitioning * {
 }
 
 .skill-badge {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.1rem;
   background: var(--background-alt);
   border: 1px solid var(--border);
   border-radius: 9999px;
@@ -482,11 +487,11 @@ body.theme-transitioning * {
 }
 
 .skill-badge:hover {
-  transform: translateY(-2px) scale(1.05);
-  border-color: var(--primary);
-  background: var(--primary-light);
-  color: var(--primary);
-  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.15);
+  transform: translateY(-3px) scale(1.04);
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+  box-shadow: 0 6px 14px rgba(20, 184, 166, 0.15);
 }
 
 /* Profile Summary block */
@@ -664,9 +669,10 @@ body.theme-transitioning * {
 }
 
 .candidate-info h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  color: var(--text);
 }
 
 .candidate-email {
@@ -679,15 +685,25 @@ body.theme-transitioning * {
   background: var(--score-badge-bg);
   color: var(--primary);
   font-weight: 800;
-  font-size: 1.1rem;
-  width: 44px;
-  height: 44px;
+  font-size: 1.15rem;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.candidate-card:hover .score-badge {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
 .candidate-summary {
@@ -698,6 +714,7 @@ body.theme-transitioning * {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .candidate-skills {
@@ -709,11 +726,18 @@ body.theme-transitioning * {
 
 .skill-tag-sm {
   font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   background: var(--background-alt);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
   color: var(--text-muted);
+  transition: var(--transition-smooth);
+}
+
+.candidate-card:hover .skill-tag-sm {
+  color: var(--text);
+  background: var(--background);
+  border-color: var(--border);
 }
 
 /* Modal Dialog */
@@ -867,3 +891,30 @@ body.theme-transitioning * {
   font-weight: 700;
   color: var(--text);
 }
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+  border: 2px solid var(--background-alt);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+

@@ -4,7 +4,7 @@ services:
   java-backend:
     build: ./demo # Points to your Java folder
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       - SPRING_DATASOURCE_URL=${DATABASE_URL}
       - SPRING_DATASOURCE_USERNAME=${DATABASE_USER}
@@ -23,6 +23,9 @@ services:
     build: ./frontend # Points to your React folder
     ports:
       - "5173:5173"
+    environment:
+      - VITE_BACKEND_TARGET=http://java-backend:8080
+      - VITE_ML_TARGET=http://ml-service:8000
     depends_on:
       - java-backend
       - ml-service
